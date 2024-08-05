@@ -1,7 +1,6 @@
 function Banner() {
-    // jsx
     return(
-        <img src="/imagens/banner.png" alt="Banner principal da página do Organo"/>
+        <img src="../imagens/banner.png" alt="Banner principal da página do Organo"/>
     )
 }
 
