@@ -1,7 +1,5 @@
 .campo-texto{
     margin: 1rem 0;
-     display: flex;
-    flex-direction: column; 
 }
 
 .label_campo-texto{
