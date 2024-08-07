@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Botao from '../Botao/botao'
 import CampoTexto from '../CampoTexto/campoTexto'
 import ListaSuspensa from '../ListaSuspensa/listaSuspensa'
@@ -15,6 +16,10 @@ const Formulario = () => {
         'Devops',
         'Inovação e Gestão'
     ]
+
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
     
     const Save = (evento) => {
         evento.preventDefatul();
@@ -25,9 +30,26 @@ const Formulario = () => {
         <section className='formulario'>
             <form onSubmit={Save} className='formulario-form'>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite o seu nome" />
-                <CampoTexto obrigatorio={true} label="Cargo" placeholder="Digite o cargo" />
-                <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
+                <CampoTexto 
+                    obrigatorio={true} 
+                    label="Nome" 
+                    placeholder="Digite o seu nome"
+                    valor={nome}
+                    aoAlterado = {valor => setNome(valor)}
+                />
+                <CampoTexto 
+                    obrigatorio={true} 
+                    label="Cargo" 
+                    placeholder="Digite o cargo" 
+                    valor={cargo}
+                    aoAlterado={valor => setCargo(valor)}
+                />
+                <CampoTexto 
+                    label="Imagem" 
+                    placeholder="Digite o endereço da imagem" 
+                    valor={imagem}
+                    aoAlterado={valor => setImagem(valor)}
+                />
                 <ListaSuspensa obrigatorio={true} label="Time" itens={times}/>
                 <Botao>
                     Criar Card
