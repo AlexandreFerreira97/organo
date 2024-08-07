@@ -1,0 +1,15 @@
+.listaSuspensa-label{
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 24px;
+}
+
+.lista-map{
+    background-color: #ffffff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
