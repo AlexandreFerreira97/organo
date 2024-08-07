@@ -5,7 +5,7 @@ import ListaSuspensa from '../ListaSuspensa/listaSuspensa'
 import './formulario.css'
 
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times = [
         'Programação',
@@ -24,7 +24,7 @@ const Formulario = () => {
     
     const Save = (evento) => {
         evento.preventDefatul();
-        console.log('Form foi submetido')
+        props.aoColaboradorCadastrado({nome,cargo,imagem,time})
     }
 
     return (
