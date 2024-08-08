@@ -8,7 +8,7 @@ const Time = (props) => {
 
     return (
         //essa condição a esquerda é uma renderização condicional do react, se for falso a section não aparece
-        props.colaboradores.length > 0 && <section className='time' style={css}>
+        (props.colaboradores.length > 0) && <section className='time' style={css}>
             <h3 className='time-titulo' style={css2}>{props.nome}</h3>
             <div className='colaboradores'>
                 {props.colaboradores.map (colaborador => <Colaborador nome={colaborador.nome} cargo={colaborador.cargo} imagem = {colaborador.imagem}/>)}
