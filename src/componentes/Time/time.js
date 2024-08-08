@@ -7,7 +7,7 @@ const Time = (props) => {
     const css2 = {borderColor:props.corPrimaria}
 
     return (
-
+        //essa condição a esquerda é uma renderização condicional do react, se for falso a section não aparece
         props.colaboradores.length > 0 && <section className='time' style={css}>
             <h3 className='time-titulo' style={css2}>{props.nome}</h3>
             <div className='colaboradores'>
