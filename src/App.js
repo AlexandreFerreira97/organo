@@ -8,38 +8,38 @@ function App() {
   const times = [
     {
       nome: 'Programação',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#57C278',
+      corSecundaria: '#D9F7E9'
     },
     {
       nome: 'Front-end',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#82CFFA',
+      corSecundaria: '#E8F8FF'
     },
     {
       nome: 'Mobile',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#A6D157',
+      corSecundaria: '#F0A8E2'
     },
     {
       nome: 'Data Science',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#E06869',
+      corSecundaria: '#F0F8E2'
     },
     {
       nome: 'UX & Design',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#DB6EBF',
+      corSecundaria: '#FAE9F5'
     },
     {
       nome: 'Devops',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#DB6EBF',
+      corSecundaria: '#FDE7E8'
     },
     {
       nome: 'Inovação e Gestão',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#FF8A29',
+      corSecundaria: '#FFEEDF'
     }
   ]
 
@@ -55,9 +55,7 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdd(colaborador)} />
-      <Time nome="Programação" />
-      <Time nome="Front-end" />
-      <Time nome="Data Science" />
+      {times.map (time => <Time key={time.nome} nome = {time.nome} corPrimaria = {time.corPrimaria} corSecundaria = {time.corSecundaria}/>)}
     </div>
   );
 }
