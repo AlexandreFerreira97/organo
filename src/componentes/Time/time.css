@@ -5,5 +5,8 @@
 }
 
 .time-titulo{
-
+    font-size: 32px;
+    border-bottom: 0.2rem solid #57C278;
+    display: inline-block;
+    padding-bottom: 0.33rem;
 }
